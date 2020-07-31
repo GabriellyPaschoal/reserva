@@ -6,11 +6,11 @@ router.post('/', (req, res, next) => { //envia os dados do cliente, dentro do co
     let reserva = { 
         tipo: req.body.tipo,
         inicioEm: req.body.inicioEm,
-        fimEm: req.body.fimEm,
+        fimEm: req.body.fimEm
     }
 
     res.status(201).send({
-        mensagem: 'Rota utilizada para criar uma reserva.reserva',
+        mensagem: 'Rota utilizada para criar uma reserva.',
         reservaCriada: {
             tipo: reserva.tipo,
             inicioEm: reserva.inicioEm,
@@ -24,7 +24,7 @@ router.post('/', (req, res, next) => { //envia os dados do cliente, dentro do co
 
 router.get('/:id', (req, res, next) => { //trazer somente uma informaçao/ editar
     res.status(200).send({
-        mensagem: 'Rota utilizada para buscar uma reserva, a partir de um id.',
+        mensagem: 'Rota utilizada para buscar uma reserva, a partir de um id.'
     })
 });
 
@@ -46,5 +46,4 @@ router.get('/', (req, res, next) => { //trazer a lista com todos os agendamentos
 
     })
 });
-
 module.exports = router;
